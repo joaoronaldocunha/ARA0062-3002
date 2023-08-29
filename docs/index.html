@@ -3,12 +3,95 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Desenvolvimento Web</title>
+    <title>Pesquisa Web</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
 </head>
 <body>
-    <h1>Desenvolvimento WEB</h1>
+    <h1>Pesquisa WEB</h1>
+    <div>
+        <form action="https://webhook.site/182b9ea5-77a1-48a7-a2ed-42f59c9d642b" method="post">
+            <fieldset>
+                <legend>Campos Identificação</legend>
+                <p>
+                    <abbr>*</abbr>
+                    <label for="campo_cpf">Cpf:</label>
+                    <input tabindex="1" type="text" name="cpf" id="campo_cpf" required placeholder="ddd.ddd.ddd-dd" pattern="\d{3}.\d{3}.\d{3}-\d{2}">
+                </p>
+                <p>
+                    <label for="campo_nome">Nome:</label>
+                    <input tabindex="2" type="text" name="nome" id="campo_nome" value="João">
+                </p>
+                <p>
+                    <label for="campo_senha">Senha:</label>
+                    <input tabindex="3" type="password" name="senha" id="campo_senha" required value="">
+                </p>
+                <p>
+                    <label for="campo_genero_f">Genero:</label>
+                    <input type="radio" name="genero" id="campo_genero_f" value="f">
+                    <label for="campo_genero_f">Feminino</label>
+                    <input type="radio" name="genero" id="campo_genero_m" value="m">
+                    <label for="campo_genero_m">Masculino</label>
+                    <input type="radio" name="genero" id="campo_genero_o" value="o">
+                    <label for="campo_genero_o">Outro</label>
+                </p>
+                <p>
+                    <label>Preferencias:</label>
+                    <input type="checkbox" name="preferencias" id="campo_preferencia_f" value="f">
+                    <label for="campo_preferencia_f">Futebol</label>
+                    <input type="checkbox" name="preferencias" id="campo_preferencia_v" value="v">
+                    <label for="campo_preferencia_v">Volei</label>
+                    <input type="checkbox" name="preferencias" id="campo_preferencia_b" value="b">
+                    <label for="campo_preferencia_b">Basquete</label>
+                </p>
+                <p>
+                    <label for="campo_datanasc">Data Nascimento:</label>
+                    <input tabindex="4" type="date" name="data_nasc" id="campo_datanasc">
+                </p>
+                <p>
+                    <label for="campo_cor">Cor Preferida</label>
+                    <input type="color" name="cor" id="campo_cor">
+                </p>
+                <p>
+                    <label for="campo_qtd_filho">Quantidade de Filhos</label>
+                    <input type="number" step="1" min="0" max="10">
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Endereço</legend>
+                <p>
+                    <label for="campo_address">Endereço</label>
+                    <input tabindex="5" type="text" name="address" id="campo_address">
+                </p>
+                <p>
+                    <label for="campo_estado">Estado: </label>
+                    <select name="estado" id="campo_estado">
+                        <optgroup label="Sudeste">
+                            <option value="sp">São Paulo</option>
+                            <option value="mg">Minas Gerais</option>
+                        </optgroup>
+                        <optgroup label="Sul">
+                            <option value="sc">Santa Catarina</option>
+                        </optgroup>
+                        <optgroup label="Centro Oeste">
+                            <option value="mt">Mato Grosso</option>
+                        </optgroup>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="campo_descricao">Descricao</label>
+                    <textarea accesskey="y" name="descricao" cols="20" rows="10" id="campo_descricao"></textarea>
+                </p>
+
+            </fieldset>
+
+            <button type="submit" formmethod="GET">Enviar GET</button>
+            <button tabindex="6" type="submit" formmethod="POST">Enviar POST</button>
+        </form>
+    </div>
+
 </body>
 </html>
